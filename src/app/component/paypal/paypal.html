@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finances</title>
+
+  <!-- Tailwind CSS (if not already added in your Angular project) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+
+<body>
+<div class="bg-[#f8f9f9] h-screen p-4">
+  <div>
+    <h1 class="font-bold text-[#131126] text-4xl">finances</h1>
+  </div>
+
+  <!-- Balance Button and Tabs -->
+  <div class="flex items-center space-x-4 mt-4 mb-4">
+    <button class="px-4 py-2 rounded-full bg-[#417bdc]/10 text-[#417bdc] font-bold border border-[#417bdc]/20 shadow">Balance</button>
+    <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Savings</button>
+    <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Crypto</button>
+  </div>
+
+  <div class="p-4 space-y-4">
+    <div class="bg-white shadow rounded-lg flex items-center p-4">
+      <img
+        src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+        alt="paypal"
+        class="w-10 h-10"
+      />
+      <div class="ml-4">
+        <h2 class="text-2xl font-extrabold text-[#131126]">${{ paypalBalance }}</h2>
+        <p class="text-gray-500 text-sm">PayPal balance</p>
+      </div>
+    </div>
+
+    <div class="bg-white shadow rounded-lg flex items-center p-4">
+      <img
+        src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+        alt="paypal"
+        class="w-10 h-10"
+      />
+      <div class="ml-4">
+        <h2 class="text-2xl font-extrabold text-[#131126]">${{ moneyOnHold }}</h2>
+        <p class="text-gray-500 text-sm">Money on hold</p>
+      </div>
+    </div>
+
+    <!-- Debit Card Card -->
+    <div class="bg-[#003087] rounded-xl p-6 shadow-lg mb-4 max-w-sm mx-auto" style="min-height: 180px;">
+      <div class="flex items-center mb-4">
+        <span class="text-white font-bold text-lg">Debit Card</span>
+      </div>
+      <div class="flex justify-center mb-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="w-24" />
+      </div>
+      <div class="flex items-center justify-between text-white text-sm whitespace-nowrap">
+        <span>Use your balance anywhere.</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" class="w-16 ml-2" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around py-3 text-sm font-semibold shadow-inner">
+    <div class="flex flex-col items-center">
+      <i class="fas fa-home text-xl mb-1 text-[#1f2d69] font-bold"></i>
+      <span class="text-sm text-[#1f2d69] font-bold">Home</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-chart-bar text-xl mb-1 text-[#417bdc] font-bold"></i>
+      <span class="text-sm text-[#417bdc] font-bold border-b-4 border-[#417bdc] rounded-b-lg pb-1">Finances</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-dollar-sign text-xl mb-1 text-[#1f2d69] font-bold"></i>
+      <span class="text-sm text-[#1f2d69] font-bold">Payments</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-tags text-xl mb-1 text-[#1f2d69] font-bold"></i>
+      <span class="text-sm text-[#1f2d69] font-bold">Deals</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-wallet text-xl mb-1 text-[#1f2d69] font-bold"></i>
+      <span class="text-sm text-[#1f2d69] font-bold">Wallet</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
