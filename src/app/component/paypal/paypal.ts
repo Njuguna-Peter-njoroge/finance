@@ -10,21 +10,20 @@ export class PaypalComponent implements OnInit {
   moneyOnHold: string = '36.04';
 
   ngOnInit() {
-    // Initialize with some demo values
+    // Initialize with balances > $10,000
     this.updateBalances();
 
     // Update balances every minute
     setInterval(() => {
       this.updateBalances();
-    }, 60000); // 60,000 ms = 1 minute
+    }, 60000); // 60 seconds
   }
 
   private updateBalances() {
-    // Generate random demo values
-    const newPaypalBalance = (Math.random() * 1000).toFixed(2);
-    const newMoneyOnHold = (Math.random() * 100).toFixed(2);
+    // Generate random demo values above $10,000
+    const newPaypalBalance = (Math.random() * 20000 + 10000).toFixed(2); // 10,000 to 30,000
+    const newMoneyOnHold = (Math.random() * 5000 + 10000).toFixed(2); // 10,000 to 15,000
 
-    // Assign to variables
     this.paypalBalance = newPaypalBalance;
     this.moneyOnHold = newMoneyOnHold;
   }
