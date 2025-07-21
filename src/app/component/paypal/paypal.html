@@ -39,7 +39,10 @@
           class="w-10 h-10"
         />
         <div class="ml-4">
-          <h2 class="text-2xl font-extrabold text-[#131126]">${{ paypalBalance }}</h2>
+          <!-- PayPal balance amount display -->
+          <h2 class="text-2xl font-extrabold text-[#131126]">
+            ${{ paypalBalance | number:'1.2-2' }} <!-- PayPal balance amount -->
+          </h2>
           <p class="text-gray-500 text-sm">PayPal balance</p>
         </div>
       </div>
@@ -51,7 +54,10 @@
           class="w-10 h-10"
         />
         <div class="ml-4">
-          <h2 class="text-2xl font-extrabold text-[#131126]">${{ moneyOnHold }}</h2>
+          <!-- Money on hold amount display -->
+          <h2 class="text-2xl font-extrabold text-[#131126]">
+            ${{ moneyOnHold | number:'1.2-2' }} <!-- Money on hold amount -->
+          </h2>
           <p class="text-gray-500 text-sm">Money on hold</p>
         </div>
       </div>

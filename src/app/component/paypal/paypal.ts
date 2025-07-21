@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-paypal',
   templateUrl: './paypal.html',
-  styleUrls: ['./paypal.css']
+  styleUrls: ['./paypal.css'],
+  imports: [DecimalPipe]
 })
 export class PaypalComponent implements OnInit {
   paypalBalance: string = '0.00';
