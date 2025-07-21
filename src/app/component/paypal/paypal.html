@@ -18,75 +18,76 @@
 </head>
 
 <body>
-<div class="bg-[#f8f9f9] h-screen p-4">
-  <div>
-    <h1 class="font-bold text-[#131126] text-4xl">Finances</h1>
-  </div>
+<div class="bg-[#f8f9f9] min-h-screen p-4">
+  <div class="max-w-screen-sm mx-auto">
+    <div>
+      <h1 class="font-bold text-[#131126] text-4xl">Finances</h1>
+    </div>
+  
+    <!-- Balance Button and Tabs -->
+    <div class="flex items-center space-x-4 mt-4 mb-4">
+      <button class="px-4 py-2 rounded-full bg-[#417bdc]/10 text-[#417bdc] font-bold border border-[#417bdc]/20 shadow">Balance</button>
+      <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Savings</button>
+      <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Crypto</button>
+    </div>
 
-  <!-- Balance Button and Tabs -->
-  <div class="flex items-center space-x-4 mt-4 mb-4">
-    <button class="px-4 py-2 rounded-full bg-[#417bdc]/10 text-[#417bdc] font-bold border border-[#417bdc]/20 shadow">Balance</button>
-    <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Savings</button>
-    <button class="px-4 py-2 rounded-full text-gray-500 font-normal">Crypto</button>
-  </div>
+    <div class="p-4 space-y-4">
+      <div class="bg-white shadow rounded-lg flex items-center p-4">
+        <img
+          src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+          alt="paypal"
+          class="w-10 h-10"
+        />
+        <div class="ml-4">
+          <h2 class="text-2xl font-extrabold text-[#131126]">${{ paypalBalance }}</h2>
+          <p class="text-gray-500 text-sm">PayPal balance</p>
+        </div>
+      </div>
 
-  <div class="p-4 space-y-4">
-    <div class="bg-white shadow rounded-lg flex items-center p-4">
-      <img
-        src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
-        alt="paypal"
-        class="w-10 h-10"
-      />
-      <div class="ml-4">
-        <h2 class="text-2xl font-extrabold text-[#131126]">${{ paypalBalance }}</h2>
-        <p class="text-gray-500 text-sm">PayPal balance</p>
+      <div class="bg-white shadow rounded-lg flex items-center p-4">
+        <img
+          src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+          alt="paypal"
+          class="w-10 h-10"
+        />
+        <div class="ml-4">
+          <h2 class="text-2xl font-extrabold text-[#131126]">${{ moneyOnHold }}</h2>
+          <p class="text-gray-500 text-sm">Money on hold</p>
+        </div>
+      </div>
+
+      <!-- Debit Card Card -->
+      <div class="flex justify-center my-4">
+        <img 
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTaDrK4ovVVuSyq8J66Wn5i55r9bzI-vmLaq13_rKA10acXgrX5" 
+          alt="PayPal Debit Card" 
+          class="rounded-xl shadow-lg w-full max-w-md h-40 sm:h-48 md:h-56 object-cover"
+        />
       </div>
     </div>
 
-    <div class="bg-white shadow rounded-lg flex items-center p-4">
-      <img
-        src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
-        alt="paypal"
-        class="w-10 h-10"
-      />
-      <div class="ml-4">
-        <h2 class="text-2xl font-extrabold text-[#131126]">${{ moneyOnHold }}</h2>
-        <p class="text-gray-500 text-sm">Money on hold</p>
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around py-3 text-sm font-semibold shadow-inner">
+      <div class="flex flex-col items-center">
+        <i class="fas fa-home text-xl mb-1 text-[#1f2d69] font-bold"></i>
+        <span class="text-sm text-[#1f2d69] font-bold">Home</span>
       </div>
-    </div>
-
-    <!-- Debit Card Card -->
-    <div class="flex justify-center my-4">
-      <img
-        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTaDrK4ovVVuSyq8J66Wn5i55r9bzI-vmLaq13_rKA10acXgrX5"
-        alt="PayPal Debit Card"
-        class="rounded-xl shadow-lg w-full h-[200px] object-cover"
-        style="max-width: 600px;"
-      />
-    </div>
-  </div>
-
-  <!-- Bottom Navigation -->
-  <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around py-3 text-sm font-semibold shadow-inner">
-    <div class="flex flex-col items-center">
-      <i class="fas fa-home text-xl mb-1 text-[#1f2d69] font-bold"></i>
-      <span class="text-sm text-[#1f2d69] font-bold">Home</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <i class="fas fa-chart-bar text-xl mb-1 text-[#417bdc] font-bold"></i>
-      <span class="text-sm text-[#417bdc] font-bold  pb-1">Finances</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <i class="fas fa-dollar-sign text-xl mb-1 text-[#1f2d69] font-bold"></i>
-      <span class="text-sm text-[#1f2d69] font-bold">Payments</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <i class="fas fa-tags text-xl mb-1 text-[#1f2d69] font-bold"></i>
-      <span class="text-sm text-[#1f2d69] font-bold">Deals</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <i class="fas fa-wallet text-xl mb-1 text-[#1f2d69] font-bold"></i>
-      <span class="text-sm text-[#1f2d69] font-bold">Wallet</span>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-chart-bar text-xl mb-1 text-[#417bdc] font-bold"></i>
+        <span class="text-sm text-[#417bdc] font-bold  pb-1">Finances</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-dollar-sign text-xl mb-1 text-[#1f2d69] font-bold"></i>
+        <span class="text-sm text-[#1f2d69] font-bold">Payments</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-tags text-xl mb-1 text-[#1f2d69] font-bold"></i>
+        <span class="text-sm text-[#1f2d69] font-bold">Deals</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-wallet text-xl mb-1 text-[#1f2d69] font-bold"></i>
+        <span class="text-sm text-[#1f2d69] font-bold">Wallet</span>
+      </div>
     </div>
   </div>
 </div>
